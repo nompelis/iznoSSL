@@ -9,7 +9,7 @@ proprietary (initiation of the shared secret, establishing of nonce and they
 key rotations) or include some level of per-use obfuscation, it cannot be
 easily crypto-analyzed. While the motto is "in cryptography, everything should
 be open but the keys", proprietary protocols hold the advantage of obscurity.
-In this particular case, because the underlying cryptography is standardize,
+In this particular case, because the underlying cryptography is standardized,
 this is not "security via obscurity", but obscurity added to existing security
 guarantees.
 
@@ -95,7 +95,7 @@ Here is a diagram of the frame and its parts:
 Here is a diagram of the frame's header and its parts:
 ```
  |------ HEADER -----------------------------------------|
- | LENGTH      | CODE        | SEQ. NUMBER | CHEKSUN     | 
+ | LENGTH      | CODE        | SEQ. NUMBER | CHECKSUM    | 
  |-------------------------------------------------------|
  |<- 4 bytes ->|<- 4 bytes ->|<- 4 bytes ->|<- 4 bytes ->|
  |-------------------------------------------------------|
@@ -139,7 +139,7 @@ A sender has to have completed sending or receiving a full frame before they
 can begin sending a new frame. The same holds true for the receiver. And
 therefore, it is implied that a higher-level protocol that coordinates their
 behaviour and adheres to these guidelines is in operation. The higher level
-operations decide how to handle errors.
+operations decides how to handle errors.
 
 IN 2025/06/05-06/19
 
